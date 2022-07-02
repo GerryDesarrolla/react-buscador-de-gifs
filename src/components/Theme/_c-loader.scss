@@ -1,0 +1,77 @@
+@keyframes animacion {
+	to {
+		transform: rotate(1turn);
+	}
+}
+
+.c-loader {
+	align-items: center;
+	background: rgba(0,0,0, 0.5);
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	
+	&__contenedor{
+		align-items: center;
+		display: flex;
+		font-size: 10px;
+		height: 6em;
+		justify-content: center;
+		position: relative;
+		width: 6em;
+	}
+	
+	&__cara{
+		animation: animacion 1s ease-in-out infinite;
+		border-radius: 50%;
+		border-style: solid;
+		position: absolute;
+		
+		&--uno{
+			--deg: -45deg;
+			animation-direction: normal;
+			border-color: currentColor transparent transparent currentColor;
+			border-width: 0.2em 0.2em 0 0;
+			color: gold;
+			height: 100%;
+			width: 100%;
+		}
+		
+		&--dos{
+			--deg: -135deg;
+			animation-direction: reverse;
+			border-color: currentColor currentColor transparent transparent;
+			border-width: 0.2em 0 0 0.2em;
+			color: lime;
+			height: 70%;
+			width: 70%;
+		}
+	}
+	
+	&__circulo{
+		background-color: transparent;
+		height: 0.1em;
+		left: 50%;
+		position: absolute;
+		top: 50%;
+		transform-origin: left;
+		transform: rotate(var(--deg));
+		width: 50%;
+		
+		&:before{
+			background-color: currentColor;
+			border-radius: 50%;
+			box-shadow: 0 0 2em, 0 0 4em, 0 0 6em, 0 0 8em, 0 0 10em, 0 0 0 0.5em rgba(255, 255, 0, 0.1);
+			content: '';
+			height: 1em;
+			position: absolute;
+			right: -0.5em;
+			top: -0.5em;
+			width: 1em;
+		}
+	}
+}
