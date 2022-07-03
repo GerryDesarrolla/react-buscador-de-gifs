@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <GifItem/> Debe hacer match con el snapshot 1`] = `
+<div>
+  <li
+    class="c-grid__item"
+  >
+    <a
+      class="c-grid__enlace"
+      href="https://gerrydesarrolla.com"
+      target="_blank"
+      title="Gerry"
+    >
+      <div
+        class="c-grid__imagen"
+      >
+        <img
+          alt="Gerry"
+          class="c-grid__img"
+          src="https://gerrydesarrolla.com/profile.jpg"
+        />
+      </div>
+      <p
+        class="c-grid__titulo"
+      >
+        Gerry
+      </p>
+    </a>
+  </li>
+</div>
+`;

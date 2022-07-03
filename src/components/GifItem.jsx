@@ -1,4 +1,6 @@
-export const GifItem = ({title, image, url}) => {
+import PropTypes from 'prop-types';
+
+export const GifItem = ({image, title, url}) => {
 	return (
 		<li className="c-grid__item">
 			<a className="c-grid__enlace" href={url} title={title} target="_blank">
@@ -12,3 +14,9 @@ export const GifItem = ({title, image, url}) => {
 		</li>
 	)
 }
+
+GifItem.propTypes = {
+	image: PropTypes.string.isRequired,
+	title: PropTypes.string.isRequired,
+	url: PropTypes.string.isRequired
+};

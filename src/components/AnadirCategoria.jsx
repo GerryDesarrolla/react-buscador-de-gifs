@@ -1,4 +1,5 @@
 import {useState} from "react";
+import PropTypes from "prop-types";
 
 export const AnadirCategoria = ({onNuevaCategoria}) => {
 	const [valorInput, setValorInput] = useState('');
@@ -20,7 +21,7 @@ export const AnadirCategoria = ({onNuevaCategoria}) => {
 	}
 	
 	return (
-		<form onSubmit={enviarFormulario}>
+		<form onSubmit={enviarFormulario} aria-label="form">
 			<fieldset>
 				<input
 					autoComplete="off"
@@ -36,4 +37,8 @@ export const AnadirCategoria = ({onNuevaCategoria}) => {
 			</fieldset>
 		</form>
 	)
+}
+
+AnadirCategoria.protoType = {
+	onNuevaCategoria: PropTypes.func.isRequired
 }
